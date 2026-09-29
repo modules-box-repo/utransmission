@@ -37,6 +37,6 @@ echo "starting transmission server..."
 PORT=$(generate_port)
 
 echo "selected port: $PORT"
-echo "$PORT">4
+echo "$PORT">&4
 
 transmission-daemon --foreground -p "$PORT" 
