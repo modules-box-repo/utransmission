@@ -1,0 +1,11 @@
+id=utransmission
+name=UTransmission
+icon=icon.jpg
+description=A Fast, Easy and Free Bittorrent Client.
+author=YasserNull
+version=v1.0.0
+versionCode=1
+repository=https://github.com/modules-box-repo/utransmission
+install=setup.sh
+start=start.sh
+permission=default
