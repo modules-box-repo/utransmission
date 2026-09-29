@@ -8,7 +8,7 @@ YELLOW='\033[1;33m'
 BLUE='\033[0;34m'
 NC='\033[0m'
 
-PORTS_FILE="/opt/modules-box/.tmp/user_ports.txt"
+PORTS_FILE="/opt/modules-box/.tmp/used_ports.txt"
 
 is_port_used() {
     port="$1"
@@ -37,6 +37,6 @@ echo "starting transmission server..."
 PORT=$(generate_port)
 
 echo "selected port: $PORT"
-echo "$PORT">&2
+echo "$PORT">4
 
-transmission-daemon -p "$PORT"
+transmission-daemon --foreground -p "$PORT" 
